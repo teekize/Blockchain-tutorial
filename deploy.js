@@ -1,7 +1,8 @@
-let rinkbyUrl = "https://rinkeby.infura.io/v3/58fee1e83ec644c58f6dcc5b729cdf56";
+require("dotenv").config();
+
+let rinkbyUrl = process.env.RINKEBY;
 
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-require("dotenv").config();
 
 const Web3 = require("web3");
 const { interface, bytecode } = require("./compile.js");
